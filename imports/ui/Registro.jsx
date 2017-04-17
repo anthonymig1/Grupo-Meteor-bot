@@ -42,7 +42,7 @@ export default class Registro extends React.Component{
       // Accounts.sendVerificationEmail(Meteor.userId(),email);
       // Meteor.call('enviarEmail',email);
     //  FlowRouter.go(`/${username}`);
-      FlowRouter.go('/Games');
+      FlowRouter.go('/home/Games');
     }else{
       this.setState({
         error:'algun casillero esta vacio',

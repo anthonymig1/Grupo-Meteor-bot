@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import { Meteor } from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 
-export const numGames = 5;
-
 export default class Games extends Component{
 	constructor(props){
 		super(props);
@@ -16,8 +14,9 @@ export default class Games extends Component{
 	}
 	dota2profile(e) {
 		e.preventDefault();
-		Meteor.call('dota2bot.updateDota2Profile',(err)=>{if(err) console.log(err);});
+		Meteor.call('userupdate.Dota2profile',(err)=>{if(err) console.log(err);});
 		FlowRouter.go('/home/Games/dota2');
+		//  console.log(Meteor.user());
 	}
 
 	render(){

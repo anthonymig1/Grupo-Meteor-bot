@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { check } from 'meteor/check';
+import '../imports/bot/BotMetodos.js';
 Meteor.startup(() => {
   // code to run on server at startup
   Accounts.onCreateUser(function(options,user){
@@ -15,7 +16,7 @@ Meteor.startup(() => {
         email = user.services.twitter.email;
       }
     }
-    console.log(Meteor.user());
+  //  console.log(Meteor.user());
     if(user.services.steam && Meteor.user() != null)
     {
 
@@ -26,7 +27,7 @@ Meteor.startup(() => {
       currentUser = Meteor.users.findOne({_id: Meteor.user()._id});
 
       Meteor.users.remove({_id: Meteor.user()._id});
-
+        console.log(Meteor.user());
       return currentUser;
     }
 

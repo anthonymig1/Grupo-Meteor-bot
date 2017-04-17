@@ -58,14 +58,14 @@ FlowRouter.route('/Email',{
     });
   }
 });
-FlowRouter.route('/Games',{
+FlowRouter.route('/home/Games',{
   action(){
     mount(EmptyLayout,{
       content:(<Games/>)
     });
   }
 });
-FlowRouter.route('/Games/Dota2',{
+FlowRouter.route('/home/Games/Dota2',{
   action(){
     mount(EmptyLayout,{
       content:(<Dota2/>)

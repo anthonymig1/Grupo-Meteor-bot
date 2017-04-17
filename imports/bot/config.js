@@ -11,3 +11,6 @@ config.steam_pass = "passwordrandom123";
 config.steam_guard_code = "steamGuardCodeIfApplicable";
 
 module.exports = config;
+// lol//
+//user = d2gb0001
+//password123
